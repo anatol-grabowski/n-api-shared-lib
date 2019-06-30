@@ -1,13 +1,13 @@
 {
-  "name": "n-api",
+  "name": "n-api-shared-lib",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "export LD_LIBRARY_PATH=\"$(pwd)/native-src/build/:$LD_LIBRARY_PATH\" && node index.js",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "node-gyp rebuild",
-    "clean": "node-gyp clean"
+    "start": "export LD_LIBRARY_PATH=\"$(pwd)/native-src/build:$LD_LIBRARY_PATH\" && node index.js",
+    "clean": "node-gyp clean && cd ./native-src && make clean",
+    "build-lib": "cd ./native-src && make build-lib",
+    "build": "node-gyp rebuild"
   },
   "author": "",
   "license": "ISC",
