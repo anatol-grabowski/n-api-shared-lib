@@ -16,7 +16,7 @@
             ],
             'libraries': [
                 "-lmylib",
-                "-L/home/tot/_tot/proj/integr/n-api/native-src/build"
+                "-L$(lib_dir)"
             ],
             'dependencies': [
                 "<!(node -p \"require('node-addon-api').gyp\")"

@@ -7,7 +7,7 @@
     "start": "export LD_LIBRARY_PATH=\"$(pwd)/native-src/build:$LD_LIBRARY_PATH\" && node index.js",
     "clean": "node-gyp clean && cd ./native-src && make clean",
     "build-lib": "cd ./native-src && make build-lib",
-    "build": "node-gyp rebuild"
+    "build": "export lib_dir=\"$(pwd)/native-src/build\" && node-gyp rebuild"
   },
   "author": "",
   "license": "ISC",
